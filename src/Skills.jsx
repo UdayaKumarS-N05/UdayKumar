@@ -43,8 +43,8 @@ const skills = [
 
 function Skills() {
   return (
-    <div className="mb-10">
-      <h2 className="text-4xl text-center font-bold my-10 ">Skills</h2>
+    <div className="mb-10 md:w-screen" id="skills">
+      <h2 className="text-4xl text-center  my-10 ">Skills</h2>
       <ul className="flex items-center  justify-between">
         {skills.map((skill) => (
           <li key={skill.name} className="w-16">

@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si";
 function Footer() {
   return (
     <div className="mb-10" id="contact">
-      <h1 className="text-4xl text-center font-bold my-10">Get in touch!</h1>
+      <h1 className="text-4xl text-center  my-10">Get in touch!</h1>
       <ul className="flex items-center justify-center gap-8">
         <li>
           <a
@@ -29,7 +29,7 @@ function Footer() {
         <h6 className="text-xs text-center ">Made by Uday!</h6>
         <a
           href="#nav"
-          className="absolute right-10 bottom-10  w-10 h-10 flex items-center justify-center  hover:bg-slate-300/40 transition-all duration-300 rounded-[50%]"
+          className="absolute right-10 bottom-10  w-10 h-10 flex items-center justify-center  hover:bg-slate-300/40 transition-all duration-300 rounded-[50%] md:-bottom-2 md:bg-slate-300/40"
         >
           <FaArrowUp className="text-2xl block " />
         </a>

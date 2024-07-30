@@ -4,19 +4,22 @@ const name = "Udaya Kumar";
 
 function Home() {
   return (
-    <section id="introduction" className="mt-40 pb-20">
-      <div id="name" className="text-7xl mb-2">
+    <section
+      id="introduction"
+      className="mt-40 pb-20 md:w-screen md:text-xl font-sans"
+    >
+      <div id="name" className="text-7xl mb-2 md:text-5xl">
         <span className="mr-4">&gt;</span>
         <span>{name}</span>
         {/* <span className="w-2 bg-red-500 h-4 text-center">|</span> */}
       </div>
-      <div id="interests" className="mb-8 mt-8 text-xl">
+      <div id="interests" className="mb-8 mt-8 text-xl md:text-base">
         <span>Front-End Developer</span>
         <span>React Developer</span>
       </div>
       <div id="description">
-        <p className="text-lg mb-4 ">Hi,</p>
-        <p className="text-2xl">
+        <p className="text-lg mb-4 md:text-lg">Hi,</p>
+        <p className="text-2xl md:text-lg md:pr-4 text-justify">
           I&apos;m eager to step into a Front End Developer role where I can
           unleash my skills in Javascript{" "}
           <img
@@ -34,11 +37,11 @@ function Home() {
           in the real world. When I&apos;m not crafting code, you might catch me
           watching Sci-Fi movies or hitting the gym.
         </p>
-        <p className="text-2xl mt-12">
+        <p className="text-2xl mt-12 md:text-lg">
           Let&apos;s team up and build something amazing together!
         </p>
         <section id="links" className="mt-28 ">
-          <ul className="flex gap-36 justify-center">
+          <ul className="flex gap-36 justify-center md:gap-20">
             <a
               href="https://www.linkedin.com/in/udaya-kumar-s/"
               target="_blank"
