@@ -4,6 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+  width: 0;
+}
+
+.marquee-horizontal {
+  width: 50%;
+  display: grid;
+}
+
+.track-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-roll 50s linear infinite;
+}
+
+.marquee-item {
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-direction: normal;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  -webkit-box-flex: 0;
+}
+
+@keyframes marquee-roll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-70%);
+  }
+}

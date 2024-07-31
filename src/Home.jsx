@@ -1,17 +1,49 @@
 import { FaFile, FaGithub, FaLinkedin } from "react-icons/fa6";
-
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
+const cursorVariants = {
+  blinking: {
+    opacity: [0, 0, 1, 1],
+    transition: {
+      duration: 1,
+      repeat: Infinity,
+      repeatDelay: 0,
+      ease: "linear",
+      times: [0, 0.5, 0.5, 1],
+    },
+  },
+};
 const name = "Udaya Kumar";
 
 function Home() {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const displayText = useTransform(rounded, (latest) => name.slice(0, latest));
+  console.log(displayText);
+  useEffect(() => {
+    const controls = animate(count, name.length, {
+      type: "tween",
+      duration: 1.5,
+      ease: "easeInOut",
+    });
+    return controls.stop;
+  }, []);
+
   return (
     <section
       id="introduction"
-      className="mt-40 pb-20 md:w-screen md:text-xl font-sans"
+      className="mt-40 pb-20 md:w-screen md:text-xl font-sans md:mt-12"
     >
-      <div id="name" className="text-7xl mb-2 md:text-5xl">
-        <span className="mr-4">&gt;</span>
-        <span>{name}</span>
-        {/* <span className="w-2 bg-red-500 h-4 text-center">|</span> */}
+      <div id="name" className="text-7xl font-bold mb-2 md:text-5xl ">
+        <span className="mr-4 md:mr-1">&gt;</span>
+        <motion.span>{displayText}</motion.span>
+        <motion.span
+          variants={cursorVariants}
+          animate="blinking"
+          className="bg-slate-950 text-transparent   inline-block ml-2"
+        >
+          S
+        </motion.span>
       </div>
       <div id="interests" className="mb-8 mt-8 text-xl md:text-base">
         <span>Front-End Developer</span>
@@ -40,29 +72,39 @@ function Home() {
         <p className="text-2xl mt-12 md:text-lg">
           Let&apos;s team up and build something amazing together!
         </p>
-        <section id="links" className="mt-28 ">
+        <section id="links" className="mt-28 md:mt-7">
           <ul className="flex gap-36 justify-center md:gap-20">
-            <a
+            <motion.a
               href="https://www.linkedin.com/in/udaya-kumar-s/"
               target="_blank"
-              className="block p-[0.2rem] hover:bg-[#00d9ffc1] hover:rounded-lg hover:backdrop-blur-sm transition-all"
+              whileHover={{ scale: 1.4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="block p-[0.2rem] hover:bg-[#00d9ffc1] hover:rounded-lg hover:backdrop-blur-sm "
             >
               <FaLinkedin className="text-3xl hover:rounded-lg" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.4 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
               href="https://github.com/UdayaKumarS-N05"
               target="_blank"
-              className="block  p-1 hover:bg-[#B983FF] hover:rounded-3xl transition-all"
+              className="block  p-1 hover:bg-[#B983FF] hover:rounded-3xl "
             >
               <FaGithub className="text-3xl hover:rounded-lg" />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
               href="Udaya_KumarS_Resume_React.pdf"
               download="Udaya_KumarS_Resume_React.pdf"
               className="block p-1"
             >
-              <FaFile className="text-3xl hover:scale-110 transition-all hover:rounded-md" />
-            </a>
+              <FaFile className="text-3xl  hover:rounded-md" />
+            </motion.a>
           </ul>
         </section>
       </div>

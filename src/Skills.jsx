@@ -43,6 +43,18 @@ const skills = [
 
 function Skills() {
   return (
+    // <div className="mb-10 md:w-screen border" id="skills">
+    //   <h2 className="text-4xl text-center  my-10 ">Skills</h2>
+    //   <div className=" marquee-horizontal border border-red-400 ">
+    //     <div className="track-horizontal">
+    //       {skills.map((skill) => (
+    //         <span key={skill.name} className="w-16 marquee-item">
+    //           <img src={skill.link} alt={skill.name} />
+    //         </span>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </div>.
     <div className="mb-10 md:w-screen" id="skills">
       <h2 className="text-4xl text-center  my-10 ">Skills</h2>
       <ul className="flex items-center  justify-between">
