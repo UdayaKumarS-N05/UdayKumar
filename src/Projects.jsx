@@ -6,7 +6,7 @@ const projects = [
     title: "Fast React Pizza",
     description:
       "A beautifully designed SPA (Single Page Application) using React. The goal was to provide users with a convenient way to order pizzas online",
-    image: "src/Fast_React_Pizza.jpg",
+    image: "Fast_React_Pizza.jpg",
     skills: [
       "HTML",
       "CSS",
@@ -24,7 +24,7 @@ const projects = [
     title: "Fast React Pizza",
     description:
       "A beautifully designed SPA (Single Page Application) using React. The goal was to provide users with a convenient way to order pizzas online",
-    image: "src/Fast_React_Pizza.jpg",
+    image: "Fast_React_Pizza.jpg",
     skills: ["HTML", "CSS", "JavaScript", "React", "React-Router", "Redux"],
     github: "github link",
     live: "live link",
@@ -34,7 +34,7 @@ const projects = [
     title: "Fast React Pizza",
     description:
       "A beautifully designed SPA (Single Page Application) using React. The goal was to provide users with a convenient way to order pizzas online",
-    image: "src/Fast_React_Pizza.jpg",
+    image: "Fast_React_Pizza.jpg",
     skills: ["HTML", "CSS", "JavaScript", "React", "React-Router", "Redux"],
     github: "github link",
     live: "live link",
