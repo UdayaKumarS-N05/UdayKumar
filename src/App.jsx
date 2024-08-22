@@ -13,7 +13,7 @@ function App() {
   });
 
   return (
-    <div className="p-8">
+    <div className="md:p-8">
       <motion.div
         className="fixed top-0 left-0 -right-10 h-2 w-screen bg-slate-950 origin-[0%] sm:sticky "
         style={{ scaleX }}
